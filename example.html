@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>Video.js logobrand example</title>
+<style>
+
+</style>
+<link rel="stylesheet" href="libs/video-js/video-js.css">
+<script src="libs/video-js/video.js"></script>
+</head>
+<body>
+
+<video src="http://vjs.zencdn.net/v/oceans.mp4" class="video-js vjs-default-skin" data-setup="{}" controls width="580" height="320"></video>
+<button id="example">
+	Click Here
+</button>
+<script src="src/videojs.logobrand.js"></script>
+<script>
+var
+
+// save a reference to the video element
+video = document.querySelector('video'),
+
+// save a reference to the video.js player for that element
+player = videojs(video);
+
+// initialize the plugin with some custom options:
+player.logobrand().initialize({
+	//height: "32px",
+	//width: "32px",
+	image: "http://www.videojs.com/img/logo.png",
+	destination: "http://www.videojs.com/"
+});
+//player.logobrand().loadImage("http://instasynch.com/images/youtube.png");
+//player.logobrand().setDestination("http://instasynch.com/images/youtube.png");
+
+document.getElementById("example").onclick = function(){
+	player.logobrand().loadImage("http://instasynch.com/images/logoNoBG.png");
+	player.logobrand().setDestination("http://instasynch.com");
+	this.innerHTML = "Image+destination changed!";
+};
+
+</script>
+
+</body>
+</html>
