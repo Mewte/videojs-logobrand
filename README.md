@@ -1,7 +1,7 @@
 videojs-logobrand
 =================
 
-Add a custom image logo that fades in and out with the user controls. Perfect for branding the media source. 
+Add a custom image logo that appears & disappears with the user controls. Perfect for branding the media source. 
 This could also be useful for learning how to make Video.JS plugins. I put this together in only a few hours of learning Video.JS so I'm not sure how awful it is.
 
 It's a barebones basic for what I needed, there are possibly some more options that would be nice. Feel free to customize how you need. You can edit the videojs.logobrand.js file to edit the exact values.
