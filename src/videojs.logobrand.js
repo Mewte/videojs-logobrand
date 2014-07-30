@@ -10,12 +10,12 @@
 
 	// define some reasonable defaults
 	var defaults = {
-		
+		image: '',
+		destination: '#'
 	};
 	// plugin initializer
 	var logobrand = function(options) {
 		var settings = videojs.util.mergeOptions(defaults, options), player = this;
-		if (typeof settings.image === 'undefined') return;
 		var link = document.createElement("a");
 			link.id = "vjs-logobrand-image-destination";
 			link.href = settings.destination;
@@ -55,9 +55,6 @@
 		this.setDestination = function(href){
 			document.getElementById("vjs-logobrand-image-destination").href = href;
 		};
-		function loadOptions(defaults, options){
-			
-		}
 		return this;
 	};	
 	// register the plugin with video.js

@@ -5,7 +5,7 @@ Add a custom image logo that appears & disappears with the user controls. Perfec
 This could also be useful for learning how to make Video.JS plugins. I put this together in only a few hours of learning Video.JS so I'm not sure how awful it is.
 
 It's a barebones basic for what I needed, there are possibly some more options that would be nice. Feel free to customize how you need. You can edit the videojs.logobrand.js file to edit the exact values.
-TODO: Add more custom and default parameters that can get set in the .initialize method
+TODO: Add more custom parameters
 
 ###Initialize logobrand
 ```JavaScript
