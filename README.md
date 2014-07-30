@@ -11,7 +11,7 @@ TODO: Add more custom and default parameters that can get set in the .initialize
 ```JavaScript
 			video = document.querySelector('video');
 			player = videojs(video);
-			player.logobrand().initialize({
+			player.logobrand({
 				image: "http://www.videojs.com/img/logo.png", //image to use
 				destination: "http://www.videojs.com/" //destination when clicked
 			});
