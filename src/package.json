@@ -1,0 +1,14 @@
+{
+  "name": "videojs-logobrand",
+  "description": "Add a custom image logo that fades in and out with the user controls. Perfect for branding the media source.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Mewte/videojs-logobrand.git"
+  },
+  "main": "videojs.logobrand.js",
+  "style": "videojs.logobrand.css",
+  "version": "0.1.1",
+  "devDependencies": {
+    "videojs": "^4.12"
+  }
+}
