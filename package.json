@@ -5,8 +5,8 @@
     "type": "git",
     "url": "git@github.com:Mewte/videojs-logobrand.git"
   },
-  "main": "videojs.logobrand.js",
-  "style": "videojs.logobrand.css",
+  "main": "src/videojs.logobrand.js",
+  "style": "src/videojs.logobrand.css",
   "version": "0.1.1",
   "devDependencies": {
     "videojs": "^4.12"
