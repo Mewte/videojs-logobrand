@@ -15,7 +15,7 @@
 	};
 	// plugin initializer
 	var logobrand = function(options) {
-		var settings = videojs.util.mergeOptions(defaults, options), player = this;
+		var settings = videojs.mergeOptions(defaults, options), player = this;
 		var link = document.createElement("a");
 			link.id = "vjs-logobrand-image-destination";
 			link.href = settings.destination;
