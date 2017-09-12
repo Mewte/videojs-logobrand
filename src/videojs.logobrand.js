@@ -1,42 +1,40 @@
-/*
- * Video.js logobrand
- * https://github.com/Mewte/videojs-logobrand
- *
- * Copyright (c) 2014 Mewte @ InstaSynch
- * Licensed under the MIT license
- */
+import videojs from 'video.js';
 
-(function(vjs) {
+// define some reasonable defaults
+const defaults = {
+  image: '',
+  destination: '#'
+};
 
-	// define some reasonable defaults
-	var defaults = {
-		image: '',
-		destination: '#'
-	};
-	// plugin initializer
-	var logobrand = function(options) {
-		var settings = videojs.util.mergeOptions(defaults, options), player = this;
-		var link = document.createElement("a");
-			link.id = "vjs-logobrand-image-destination";
-			link.href = settings.destination;
-			link.target = "_blank";
-		var image = document.createElement('img');
-			image.id = 'vjs-logobrand-image';
-			//image.style.height = settings.height;
-			//image.style.width = settings.width;
-			image.src = settings.image;
-		link.appendChild(image);
-		player.el().appendChild(link);
-		
-		this.loadImage = function(src){
-			document.getElementById("vjs-logobrand-image").src=src;
-		};
-		this.setDestination = function(href){
-			document.getElementById("vjs-logobrand-image-destination").href = href;
-		};
-		return this;
-	};	
-	// register the plugin with video.js
-	vjs.plugin('logobrand', logobrand);
+// plugin initializer
+function logobrand(options) {
+  const settings = videojs.mergeOptions(defaults, options),
+        player   = this;
 
-}(window.videojs));
+  const link = document.createElement('a');
+
+  link.id     = 'vjs-logobrand-image-destination';
+  link.href   = settings.destination;
+  link.target = '_blank';
+
+  const image = document.createElement('img');
+
+  image.id  = 'vjs-logobrand-image';
+  image.src = settings.image;
+
+  link.appendChild(image);
+  player.el().appendChild(link);
+
+  this.loadImage = src => {
+    document.getElementById('vjs-logobrand-image').src = src;
+  };
+
+  this.setDestination = href => {
+    document.getElementById('vjs-logobrand-image-destination').href = href;
+  };
+
+  return this;
+};
+
+// register the plugin with video.js
+videojs.registerPlugin('logobrand', logobrand);
